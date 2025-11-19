@@ -8,6 +8,7 @@ const Page = () => {
   const getApiData = async () => {
     try {
       const res = await axios.get("https://jsonplaceholder.typicode.com/users");
+      console.log(res)
       setMyData(res.data);
     } catch (error) {
       setIsError(error.message);
